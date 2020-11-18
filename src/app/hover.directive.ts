@@ -1,10 +1,21 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, HostListener} from '@angular/core';
 
 @Directive({
   selector: '[appHover]'
 })
 export class HoverDirective {
+  constructor(private el: ElementRef) { }
 
-  constructor() { }
+  @HostListener('mouseenter') onMouseEnter() {
+    this.hover('lightblue');
+  }
 
+  @HostListener('mouseleave') onMouseLeave() {
+    this.hover(null);
+  }
+
+  private hover(color: string) {
+    this.el.nativeElement.style.backgroundColor = color;
+  }
 }
+
