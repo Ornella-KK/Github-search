@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AboutComponent } from './about/about.component';
 import { SearchFormComponent } from './search-form/search-form.component';
-import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HoverDirective } from './hover.directive';
@@ -20,7 +19,6 @@ import { HoverDirective } from './hover.directive';
     ProfileComponent,
     AboutComponent,
     SearchFormComponent,
-    HighlightDirective,
     DateCountPipe,
     NavBarComponent,
     HoverDirective
