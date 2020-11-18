@@ -11,26 +11,23 @@ export class ProfileServiceService {
   userRepo:Repository
   userProfile: User;
 
-  constructor(private http: HttpClient) {
-    this.userProfile = new User('', '', 0, 0, '', '' );
-
-  }
-
-  searchUser(user) {
-    interface Responsee {
+constructor(private http:HttpClient){
+  this.userProfile = new User('','',0,0,'','');
+}
+  searchUser(user){
+    interface Response{
       login: string,
-      avatar_url: string,
-      followers: number,
-      following: number,
-      public_repos: string,
-      html_url : any
-
-
+      avatar_url:string,
+      followers:number,
+      following:number,
+      public_repos:string,
+      html_url:any
     }
+  
 
     let mainUrl = environment.API_URL + user + '?access_token=' + environment.API_KEY;
     let promise = new Promise((resolve, reject) => {
-      this.http.get<Responsee>(mainUrl).toPromise().then(res => {
+      this.http.get<Response>(mainUrl).toPromise().then(res => {
         this.userProfile = res;
         resolve()
 
@@ -55,13 +52,11 @@ export class ProfileServiceService {
 
       }, error => {
         reject();
-      })
+      });
 
     });
     return promise
   }
-
-
 }
 
 
