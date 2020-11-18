@@ -12,7 +12,7 @@
       </div>
       <div class="col-md-6">
         <div class="intro">
-          <p>Find Github:</p>
+          <p>Search Github Profile:</p>
         </div>
         <app-search-form (searchProf)="searchUser($event)"></app-search-form>
       </div>
@@ -25,6 +25,7 @@
       <div class="card" appHighlight>
         <h4 class="card-title">{{ userRepo.name }}</h4>
         <p class="repo">{{ userRepo.description }}</p>
+        <p>Created {{ repo.created_at|dateCount}}</p>
         <a target="_blank" class=" btn btn-primary text-white" href="{{ repo.html_url }}">View Project</a>
       </div>
     </div>

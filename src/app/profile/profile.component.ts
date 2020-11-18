@@ -16,25 +16,21 @@ export class ProfileComponent implements OnInit {
   constructor(private profileService: ProfileServiceService) {
  
   }
-
-  searchUser(user) {
-
-    this.profileService.searchUser(user).then((done) => {
+  searchUser(user){
+    this.profileService.searchUser(user).then((done)=>{
       this.userProfile = this.profileService.userProfile;
     },
       (error) => {
         console.log(error)
       }
     )
-
-    this.profileService.displayRepos(user).then((done) => {
+    this.profileService.displayRepos(user).then((done)=>{
       this.userRepo = this.profileService.userRepo;
     },
       (error) => {
-        console.log(error)
+      console.log(error)
       }
     )
-
   }
 
   ngOnInit(): void {
