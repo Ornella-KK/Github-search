@@ -22,7 +22,7 @@
     
     <div *ngFor="let repo of userRepo">
         
-      <div class="card" appHighlight>
+      <div class="card" appHover>
         <h4 class="card-title">{{ userRepo.name }}</h4>
         <p class="repo">{{ userRepo.description }}</p>
         <p>Created {{ repo.created_at|dateCount}}</p>
