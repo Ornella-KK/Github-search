@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from './user'
-import { Repository } from './repository'
-import { environment } from '../environments/environment';
+import { User } from '../user'
+import { Repository } from '../repository'
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProfileService {
+export class ProfileServiceService {
   userProfile: User
 
   userRepo: Repository
@@ -66,4 +66,5 @@ export class ProfileService {
 
 
 }
+
 
