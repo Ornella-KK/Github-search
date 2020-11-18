@@ -23,9 +23,8 @@
     <div *ngFor="let repo of userRepo">
         
       <div class="card" appHighlight>
-        <h4 class="card-title">{{ repo.name }}</h4>
-        <p class="">{{ repo.description }}</p>
-        <p>Created {{ repo.created_at|dateAgo}}</p>
+        <h4 class="card-title">{{ userRepo.name }}</h4>
+        <p class="">{{ userRepo.description }}</p>
         <a target="_blank" class=" btn btn-primary text-white" href="{{ repo.html_url }}">View Project</a>
       </div>
     </div>
