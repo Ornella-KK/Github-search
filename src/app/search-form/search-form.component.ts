@@ -10,7 +10,7 @@ import { Repository } from '../repository';
   styleUrls: ['./search-form.component.css']
 })
 export class SearchFormComponent implements OnInit {
-  searchTerm: string
+  searchTerm: string;
   @Output() searchProf = new EventEmitter<any>();
 
   searchUser() {
