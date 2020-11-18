@@ -8,9 +8,9 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class ProfileServiceService {
-  userProfile: User
+  userProfile: User;
 
-  userRepo: Repository
+  userRepo: Repository;
   constructor(private http: HttpClient) {
     this.userProfile = new User('', '', 0, 0, '', '' );
 
