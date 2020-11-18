@@ -3,4 +3,7 @@ img {
     height: 300px;
     width: 300px;
   }
-
+.intro p{
+  font-size: large;
+  font-weight: bold;
+}
