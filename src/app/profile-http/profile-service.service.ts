@@ -8,9 +8,9 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class ProfileServiceService {
+  userRepo:Repository
   userProfile: User;
 
-  userRepo: Repository;
   constructor(private http: HttpClient) {
     this.userProfile = new User('', '', 0, 0, '', '' );
 
@@ -41,13 +41,10 @@ export class ProfileServiceService {
     });
     return promise
   }
-
-  displayRepos(user) {
-    interface apiResponse {
-      name: string,
-      description: string,
-      
-
+  displayRepos(user){
+    interface apiResponse{
+      name: string;
+      description:string;
     }
 
     let repoUrl = environment.API_URL + user + '/repos' + '?access_token=' + environment.API_KEY;
